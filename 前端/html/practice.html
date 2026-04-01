@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> 声明这是HTML5文档 -->
+<html lang="zh-CN">
+<!-- <html> 标签是HTML页面的根元素，lang属性指定页面语言为中文 -->
+<head>
+    <!-- <head> 标签包含了文档的元数据，不会直接显示在页面上 -->
+    <meta charset="UTF-8">
+    <!-- 指定文档字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 视口元数据，确保页面在不同设备上正确显示 -->
+    <title>HTML综合示例页面</title>
+    <!-- 页面标题，显示在浏览器标签页上 -->
+    <meta name="description" content="这是一个包含所有HTML核心知识的示例页面">
+    <!-- 页面描述信息，有助于SEO优化 -->
+</head>
+<body>
+    <!-- <body> 标签包含可见的页面内容 -->
+
+    <!-- HTML5语义化头部标签  -->
+    <header>
+        <!-- <header> 标签定义文档或节的页眉 -->
+        <div>
+            <!-- <div> 是一个通用容器标签 -->
+            <img src="https://picsum.photos/100/100" alt="网站Logo" width="100" height="100">
+            <!-- <img> 标签用于插入图像，alt属性提供替代文本 -->
+        </div>
+        <h1>HTML综合知识演示</h1>
+        <!-- <h1> 是最重要的标题标签 -->
+        <p>这个页面展示了HTML的所有核心知识点</p>
+        <!-- <p> 标签定义段落 -->
+    </header>
+
+    <!-- HTML5语义化导航标签 -->
+    <nav>
+        <!-- <nav> 标签定义导航链接 -->
+        <h2>导航菜单</h2>
+        <!-- <h2> 是第二级标题 -->
+        <ul>
+            <!-- <ul> 标签定义无序列表 -->
+            <li><a href="#text-section">文本标签</a></li>
+            <!-- <li> 标签定义列表项，<a> 标签定义超链接 -->
+            <li><a href="#media-section">媒体元素</a></li>
+            <li><a href="#list-section">列表演示</a></li>
+            <li><a href="#table-section">表格示例</a></li>
+            <li><a href="#form-section">表单元素</a></li>
+        </ul>
+    </nav>
+
+    <!-- HTML5语义化主内容区 -->
+    <main>
+        <!-- <main> 标签定义文档的主要内容 -->
+
+        <!-- 文本标签部分 -->
+        <section id="text-section">
+            <!-- <section> 标签定义文档中的节 -->
+            <h2>文本标签演示</h2>
+            <div>
+                <h3>标题层级 (h1-h6)</h3>
+                <!-- h1到h6是六个级别的标题标签，h1最重要 -->
+                <h1>这是h1标题（最大）</h1>
+                <h2>这是h2标题</h2>
+                <h3>这是h3标题</h3>
+                <h4>这是h4标题</h4>
+                <h5>这是h5标题</h5>
+                <h6>这是h6标题（最小）</h6>
+            </div>
+
+            <div>
+                <h3>段落与文本格式化</h3>
+                <p>这是一个普通段落。HTML段落使用&lt;p&gt;标签定义，段落之间会自动添加空白。</p>
+                <p>在段落中，我们可以使用特殊标签进行格式化：
+                    <strong>这部分文字使用strong标签，表示重要内容（默认加粗）</strong>，
+                    <!-- <strong> 标签定义重要文本 -->
+                    <em>这部分使用em标签，表示强调（默认斜体）</em>。
+                    <!-- <em> 标签定义被强调的文本 -->
+                </p>
+                <p>这是一个需要换行的段落<br/>这一行是通过br标签实现的换行效果</p>
+                <!-- <br> 标签插入一个换行符 -->
+            </div>
+            
+            <hr/> <!-- <hr> 标签定义主题的分隔线 -->
+        </section>
+
+        <!-- 媒体元素部分 -->
+        <section id="media-section">
+            <h2>媒体元素演示</h2>
+            
+            <div>
+                <h3>图片展示</h3>
+                <p>使用img标签插入图片：</p>
+                <img src="https://picsum.photos/600/300" alt="风景图片" width="600">
+                <p>带链接的图片：</p>
+                <a href="https://picsum.photos" target="_blank">
+                    <!-- target="_blank" 属性使链接在新窗口中打开 -->
+                    <img src="https://picsum.photos/300/200" alt="可点击的图片" width="300">
+                </a>
+            </div>
+
+            <div>
+                <h3>视频播放</h3>
+                <video controls width="600" poster="https://picsum.photos/600/300">
+                    <!-- <video> 标签用于嵌入视频，controls属性添加播放控件 -->
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <!-- <source> 标签为媒体元素指定多个媒体资源 -->
+                    您的浏览器不支持HTML5视频播放
+                    <!-- 当浏览器不支持视频标签时显示的替代文本 -->
+                </video>
+                <p>上面是使用video标签插入的视频，包含播放控件</p>
+            </div>
+            
+            <hr/>
+        </section>
+
+        <!-- 列表部分 -->
+        <section id="list-section">
+            <h2>列表演示</h2>
+            
+            <div>
+                <h3>无序列表 (ul + li)</h3>
+                <ul>
+                    <li>苹果</li>
+                    <li>香蕉</li>
+                    <li>橙子</li>
+                    <li>草莓</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>有序列表 (ol + li)</h3>
+                <ol>
+                    <!-- <ol> 标签定义有序列表 -->
+                    <li>打开电脑</li>
+                    <li>启动浏览器</li>
+                    <li>访问网站</li>
+                    <li>浏览内容</li>
+                </ol>
+            </div>
+
+            <div>
+                <h3>嵌套列表</h3>
+                <ul>
+                    <li>水果
+                        <ul>
+                            <li>苹果</li>
+                            <li>香蕉</li>
+                        </ul>
+                    </li>
+                    <li>蔬菜
+                        <ul>
+                            <li>青菜</li>
+                            <li>萝卜</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <hr/>
+        </section>
+
+        <!-- 表格部分 -->
+        <section id="table-section">
+            <h2>表格示例</h2>
+            
+            <table border="1" width="100%">
+                <!-- <table> 标签定义表格，border属性设置边框宽度 -->
+                <caption>学生信息表</caption>
+                <!-- <caption> 标签定义表格标题 -->
+                <tr>
+                    <!-- <tr> 标签定义表格行 -->
+                    <th>学号</th>
+                    <!-- <th> 标签定义表格的表头单元格 -->
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>班级</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <!-- <td> 标签定义表格的标准单元格 -->
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>18</td>
+                    <td>高一(1)班</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>李四</td>
+                    <td>女</td>
+                    <td>17</td>
+                    <td>高一(2)班</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>王五</td>
+                    <td>男</td>
+                    <td>18</td>
+                    <td>高一(1)班</td>
+                </tr>
+            </table>
+            
+            <hr/>
+        </section>
+
+        <!-- 表单部分 -->
+        <section id="form-section">
+            <h2>表单元素演示</h2>
+            
+            <form action="#" method="post">
+                <!-- <form> 标签定义表单，用于用户输入 -->
+                <!-- action属性指定表单提交的地址，method属性指定提交方式 -->
+                <div>
+                    <label for="username">用户名：</label>
+                    <!-- <label> 标签为表单控件定义标注 -->
+                    <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+                    <!-- <input> 标签定义输入字段，type属性指定类型 -->
+                    <!-- id属性用于唯一标识元素，for属性将label与input关联 -->
+                    <!-- placeholder属性提供输入提示，required属性表示该字段必填 -->
+                </div>
+
+                <div>
+                    <label for="password">密码：</label>
+                    <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                    <!-- type="password" 创建密码输入框，输入会被遮盖 -->
+                </div>
+
+                <div>
+                    <label for="email">邮箱：</label>
+                    <input type="email" id="email" name="email" placeholder="请输入邮箱">
+                    <!-- type="email" 创建邮箱输入框，会验证邮箱格式 -->
+                </div>
+
+                <div>
+                    <label for="phone">电话：</label>
+                    <input type="tel" id="phone" name="phone" placeholder="请输入电话号码">
+                    <!-- type="tel" 创建电话号码输入框 -->
+                </div>
+
+                <div>
+                    <label for="age">年龄：</label>
+                    <input type="number" id="age" name="age" min="0" max="120" value="18">
+                    <!-- type="number" 创建数字输入框，min/max限制数值范围 -->
+                </div>
+
+                <div>
+                    <label for="birthday">生日：</label>
+                    <input type="date" id="birthday" name="birthday">
+                    <!-- type="date" 创建日期选择器 -->
+                </div>
+
+                <div>
+                    <label>性别：</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <!-- type="radio" 创建单选按钮，同一name的单选按钮为一组 -->
+                    <label for="male">男</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">女</label>
+                </div>
+
+                <div>
+                    <label>爱好：</label>
+                    <input type="checkbox" id="hobby1" name="hobby" value="reading">
+                    <!-- type="checkbox" 创建复选框，可多选 -->
+                    <label for="hobby1">阅读</label>
+                    <input type="checkbox" id="hobby2" name="hobby" value="sports">
+                    <label for="hobby2">运动</label>
+                    <input type="checkbox" id="hobby3" name="hobby" value="music">
+                    <label for="hobby3">音乐</label>
+                </div>
+
+                <div>
+                    <label for="major">专业：</label>
+                    <select id="major" name="major">
+                        <!-- <select> 标签创建下拉列表 -->
+                        <option value="">请选择专业</option>
+                        <!-- <option> 标签定义下拉列表中的选项 -->
+                        <option value="computer">计算机科学</option>
+                        <option value="math">数学</option>
+                        <option value="physics">物理</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="introduction">个人简介：</label><br>
+                    <textarea id="introduction" name="introduction" rows="5" cols="50" placeholder="请输入个人简介"></textarea>
+                    <!-- <textarea> 标签定义多行文本输入框 -->
+                </div>
+
+                <div>
+                    <input type="submit" value="提交">
+                    <!-- type="submit" 创建提交按钮 -->
+                    <input type="reset" value="重置">
+                    <!-- type="reset" 创建重置按钮 -->
+                    <input type="button" value="普通按钮" onclick="alert('这是一个普通按钮')">
+                    <!-- type="button" 创建普通按钮，onclick添加点击事件 -->
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- HTML5语义化侧边栏 -->
+    <aside>
+        <!-- <aside> 标签定义页面内容之外的内容，如侧边栏 -->
+        <h3>学习资源</h3>
+        <ul>
+            <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" target="_blank">MDN HTML文档</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML教程</a></li>
+        </ul>
+    </aside>
+
+    <!-- HTML5语义化页脚 -->
+    <footer>
+        <!-- <footer> 标签定义文档或节的页脚 -->
+        <hr>
+        <p>&copy; 2023 HTML学习示例页面 - 包含所有HTML核心知识</p>
+        <!-- &copy; 是版权符号 © 的实体引用 -->
+        <p>联系我们: <a href="mailto:example@test.com">example@test.com</a></p>
+        <!-- mailto: 链接可以直接打开邮件客户端 -->
+    </footer>
+</body>
+</html>
